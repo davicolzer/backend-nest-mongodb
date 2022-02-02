@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
+import 'dotenv/config';
 
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://dacolz:bolado321@totalzero.0giy7.mongodb.net/users',
+      `${process.env.MONGODB_CONNECTION}/users`,
+      // `mongodb+srv://dacolz:bolado321@totalzero.0giy7.mongodb.net/users`,
       // {
       //   connectionName: 'users',
       // },
