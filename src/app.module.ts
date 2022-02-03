@@ -7,10 +7,6 @@ import 'dotenv/config';
   imports: [
     MongooseModule.forRoot(
       `${process.env.MONGODB_CONNECTION}/users`,
-      // `mongodb+srv://dacolz:bolado321@totalzero.0giy7.mongodb.net/users`,
-      // {
-      //   connectionName: 'users',
-      // },
     ),
     UsersModule,
   ],
